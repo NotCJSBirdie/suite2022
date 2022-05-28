@@ -6,7 +6,7 @@ import DashboardIcon from "@rsuite/icons/Dashboard";
 import PeoplesIcon from "@rsuite/icons/Peoples";
 import TreeIcon from "@rsuite/icons/Tree";
 import GearIcon from "@rsuite/icons/Gear";
-import "rsuite/styles/index.less";
+import 'rsuite/dist/rsuite.min.css'
 
 export default function Home() {
   return (
