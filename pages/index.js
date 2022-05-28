@@ -6,7 +6,12 @@ import DashboardIcon from "@rsuite/icons/Dashboard";
 import PeoplesIcon from "@rsuite/icons/Peoples";
 import TreeIcon from "@rsuite/icons/Tree";
 import GearIcon from "@rsuite/icons/Gear";
-import 'rsuite/dist/rsuite.min.css'
+import "rsuite/dist/rsuite.min.css";
+import styled from "styled-components";
+import { Container } from "rsuite";
+import { Sidebar } from "rsuite";
+import { Header } from "rsuite";
+import { Content } from "rsuite";
 
 export default function Home() {
   return (
@@ -17,35 +22,57 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div style={{ width: 240 }}>
-        <Sidenav defaultOpenKeys={["3", "4"]}>
-          <Sidenav.Body>
-            <Nav activeKey="1">
-              <Nav.Item eventKey="1" icon={<DashboardIcon />}>
-                Dashboard
-              </Nav.Item>
-              <Nav.Item eventKey="2" icon={<PeoplesIcon />}>
-                User Group
-              </Nav.Item>
-              <Nav.Menu eventKey="3" title="Advanced" icon={<TreeIcon />}>
-                <Nav.Item eventKey="3-1">Geo</Nav.Item>
-                <Nav.Item eventKey="3-2">Devices</Nav.Item>
-                <Nav.Item eventKey="3-3">Loyalty</Nav.Item>
-                <Nav.Item eventKey="3-4">Visit Depth</Nav.Item>
-              </Nav.Menu>
-              <Nav.Menu eventKey="4" title="Settings" icon={<GearIcon />}>
-                <Nav.Item eventKey="4-1">Applications</Nav.Item>
-                <Nav.Item eventKey="4-2">Channels</Nav.Item>
-                <Nav.Item eventKey="4-3">Versions</Nav.Item>
-                <Nav.Menu eventKey="4-5" title="Custom Action">
-                  <Nav.Item eventKey="4-5-1">Action Name</Nav.Item>
-                  <Nav.Item eventKey="4-5-2">Action Params</Nav.Item>
-                </Nav.Menu>
-              </Nav.Menu>
-            </Nav>
-          </Sidenav.Body>
-        </Sidenav>
-      </div>
+      <Container>
+        <Container>
+          <Sidebar
+            style={{
+              width: "20%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+            collapsible
+          >
+            <Sidenav defaultOpenKeys={["3", "4"]}>
+              <Sidenav.Body>
+                <Nav activeKey="1">
+                  <Nav.Item eventKey="1" icon={<DashboardIcon />}>
+                    Dashboard
+                  </Nav.Item>
+                  <Nav.Item eventKey="2" icon={<PeoplesIcon />}>
+                    User Group
+                  </Nav.Item>
+                  <Nav.Menu eventKey="3" title="Advanced" icon={<TreeIcon />}>
+                    <Nav.Item eventKey="3-1">Geo</Nav.Item>
+                    <Nav.Item eventKey="3-2">Devices</Nav.Item>
+                    <Nav.Item eventKey="3-3">Loyalty</Nav.Item>
+                    <Nav.Item eventKey="3-4">Visit Depth</Nav.Item>
+                  </Nav.Menu>
+                  <Nav.Menu eventKey="4" title="Settings" icon={<GearIcon />}>
+                    <Nav.Item eventKey="4-1">Applications</Nav.Item>
+                    <Nav.Item eventKey="4-2">Channels</Nav.Item>
+                    <Nav.Item eventKey="4-3">Versions</Nav.Item>
+                    <Nav.Menu eventKey="4-5" title="Custom Action">
+                      <Nav.Item eventKey="4-5-1">Action Name</Nav.Item>
+                      <Nav.Item eventKey="4-5-2">Action Params</Nav.Item>
+                    </Nav.Menu>
+                  </Nav.Menu>
+                </Nav>
+              </Sidenav.Body>
+            </Sidenav>
+          </Sidebar>
+        </Container>
+
+        <Container>
+          <Header>
+            <h2>Page Title</h2>
+          </Header>
+          <Content>Content</Content>
+        </Container>
+      </Container>
     </div>
   );
 }
+
+// const SideNav = styled.div`
+//   height: 100%;
+// `;
