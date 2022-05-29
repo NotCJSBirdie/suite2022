@@ -13,6 +13,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@fontsource/roboto": "^4.5.7",
+    "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.1",
     "@rsuite/icons": "^1.0.2",
     "css-loader": "^6.7.1",
